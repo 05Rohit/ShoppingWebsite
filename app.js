@@ -14,7 +14,7 @@ const dotenv = require('dotenv')
 
 
 dotenv.config({path: './config.env'});
-const port =5000;
+const port =process.env.PORT || 5000
 
 app.get('/', (req, res) => {
     res.send("Hello from the server!");
